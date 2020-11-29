@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>New Book Information</h2>
+	<form action="/book/add" method="post">
+		<div>
+			Title : <input type="text" name="title" th:value="${book.title}">
+		</div>
+		<div>
+			Author : <input type="text" name="author">
+		</div>
+		<div>
+			Publisher: <input type="text" name="publisher">
+		</div>
+		<div>
+			Publication Date : <input type="date" name="publicationDate">
+		</div>
+		<div>
+			Language :<select name="language">
+				<option value="English">English</option>
+				<option value="Spanish">Spanish</option>
+			</select>
+		</div>
+
+
+		<div>
+			Category :<select name="category">
+				<option value="Management">Management</option>
+				<option value="Fiction">Fiction</option>
+				<option value="Engineering">Engineering</option>
+				<option value="Programming">Programming</option>
+				<option value="Arts">Arts</option>
+			</select>
+		</div>
+
+		<div>
+			Pages : <input type="text" name="numberOfPages">
+		</div>
+
+		<div>
+			Format : <select name="format">
+				<option value="Paperback">Paperback</option>
+				<option value="Hardcover">Hardcover</option>
+			</select>
+		</div>
+
+
+		<div>
+			ISBN : <input type="text" name="isbn">
+		</div>
+
+		<div>
+			Shipping Weight : <input type="text" name="shippingWeight">
+		</div>
+		<div>
+			List Price : <input type="text" name="listPrice">
+		</div>
+		<div>
+			Our Price : <input type="text" name="ourPrice">
+		</div>
+		<div>
+			Number in stock : <input type="text" name="inStockNumber">
+		</div>
+		<div>
+			Status : <input type="radio" name="active" checked = "${book.active}" value="true"> Active <input
+				type="radio" name="active" value="false"> In Active
+		</div>
+
+		<div>
+			Description : <input type="text" name="description">
+		</div>
+		<div>Upload book image</div>
+		<input type="submit"><input type="reset">
+	</form>
+
+</body>
+</html>

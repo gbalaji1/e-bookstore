@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Book List</h2>
+	<table>
+    <tr>
+        <th>No</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Publication Date</th>
+        <th>Language</th>
+        <th>Category</th>
+    </tr>
+    <tr th:each="book, bookStat : ${books}">
+        <td th:text="${bookStat.count}"></td>
+        <td> <a th:href="@{/book/bookInfo(id=${book.id})}"><span th:text="${book.title}"></span></a></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.publisher}"></td>
+        <td th:text="${book.publicationDate}"></td>
+        <td th:text="${book.language}"></td>
+        <td th:text="${book.category}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

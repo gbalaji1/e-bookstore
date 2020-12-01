@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Book Info</h2>
+	<a th:href="@{/book/bookList}">Go Back</a>
+	<a th:href="@{/book/update(id=${book.id})}">Edit</a>
+	<div>
+		<div></div>
+		<div>
+		Title :  <span th:text="${book.title}"></span>
+		<!-- Author : 
+		 Publisher Publication Date Language English
+			Spanish Category Management Fiction Engineering Programming Arts
+			Pages Format Paperback Hardcover ISBN Shipping Weight List Price Our
+			Price Number in stock Status Active Inactive Description Upload book
+			image-->
+		</div> 
+	</div>
+
+</body>
+</html>

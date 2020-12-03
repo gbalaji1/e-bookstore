@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h2>New Book Information</h2>
-	<form action="/book/add" method="post">
+	<form action="/book/add" method="post" enctype="multipart/form-data">
 		<div>
 			Title : <input type="text" name="title" th:value="${book.title}">
 		</div>
@@ -73,7 +73,9 @@
 		<div>
 			Description : <input type="text" name="description">
 		</div>
-		<div>Upload book image</div>
+		<div>Upload book image : <input id="bookImage" type="file" name="bookImage"
+								th:value="${book.bookImage}" />
+		</div>
 		<input type="submit"><input type="reset">
 	</form>
 

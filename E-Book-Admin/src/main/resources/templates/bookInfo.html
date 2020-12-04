@@ -12,6 +12,7 @@
 		<div></div>
 		<div>
 		Title :  <span th:text="${book.title}"></span>
+		<div><img alt=""  th:src="@{/image/book/}+${book.id}+'.png'"/></div>
 		<!-- Author : 
 		 Publisher Publication Date Language English
 			Spanish Category Management Fiction Engineering Programming Arts

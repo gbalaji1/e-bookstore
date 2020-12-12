@@ -3,32 +3,46 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
 </head>
 <body>
+<div class="container-fluid">
 	<h2>New Book Information</h2>
 	<form action="/book/add" method="post" enctype="multipart/form-data">
-		<div>
-			Title : <input type="text" name="title" th:value="${book.title}">
+		<div class="form-group">
+			Title : <input class="form-control" type="text" name="title" th:value="${book.title}">
 		</div>
-		<div>
-			Author : <input type="text" name="author">
+		<div class="form-group">
+			Author : <input class="form-control" type="text" name="author">
 		</div>
-		<div>
-			Publisher: <input type="text" name="publisher">
+		<div class="form-group">
+			Publisher: <input class="form-control" type="text" name="publisher">
 		</div>
-		<div>
-			Publication Date : <input type="date" name="publicationDate">
+		<div class="form-group">
+			Publication Date : <input class="form-control" type="date" name="publicationDate">
 		</div>
-		<div>
-			Language :<select name="language">
+		<div class="form-group">
+			Language :<select name="language" class="form-control" >
 				<option value="English">English</option>
 				<option value="Spanish">Spanish</option>
 			</select>
 		</div>
 
 
-		<div>
-			Category :<select name="category">
+		<div class="form-group">
+			Category :<select name="category" class="form-control">
 				<option value="Management">Management</option>
 				<option value="Fiction">Fiction</option>
 				<option value="Engineering">Engineering</option>
@@ -37,47 +51,48 @@
 			</select>
 		</div>
 
-		<div>
-			Pages : <input type="text" name="numberOfPages">
+		<div class="form-group">
+			Pages : <input class="form-control" type="text" name="numberOfPages">
 		</div>
 
-		<div>
-			Format : <select name="format">
+		<div class="form-group">
+			Format : <select name="format" class="form-control">
 				<option value="Paperback">Paperback</option>
 				<option value="Hardcover">Hardcover</option>
 			</select>
 		</div>
 
 
-		<div>
-			ISBN : <input type="text" name="isbn">
+		<div class="form-group">
+			ISBN : <input type="text" name="isbn" class="form-control">
 		</div>
 
-		<div>
-			Shipping Weight : <input type="text" name="shippingWeight">
+		<div class="form-group">
+			Shipping Weight : <input type="text" name="shippingWeight" class="form-control">
 		</div>
-		<div>
-			List Price : <input type="text" name="listPrice">
+		<div class="form-group">
+			List Price : <input type="text" name="listPrice" class="form-control">
 		</div>
-		<div>
-			Our Price : <input type="text" name="ourPrice">
+		<div class="form-group">
+			Our Price : <input type="text" name="ourPrice" class="form-control">
 		</div>
-		<div>
-			Number in stock : <input type="text" name="inStockNumber">
+		<div class="form-group">
+			Number in stock : <input type="text" name="inStockNumber" class="form-control">
 		</div>
-		<div>
+		<div class="form-group">
 			Status : <input type="radio" name="active" checked = "${book.active}" value="true"> Active <input
 				type="radio" name="active" value="false"> In Active
 		</div>
 
-		<div>
-			Description : <input type="text" name="description">
+		<div class="form-group">
+			Description : <input class="form-control" type="text" name="description">
 		</div>
-		<div>Upload book image : <input id="bookImage" type="file" name="bookImage"
+		<div class="form-group">Upload book image : <input class="form-control" id="bookImage" type="file" name="bookImage"
 								th:value="${book.bookImage}" />
 		</div>
-		<input type="submit"><input type="reset">
+		<input type="submit" class="btn btn-success"><input type="reset" class="btn btn-warning">
 	</form>
+	</div>
 
 </body>
 </html>

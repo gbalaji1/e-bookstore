@@ -22,20 +22,7 @@
 </head>
 <body>
 	<div>
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-			<!-- Brand/logo -->
-			<a class="navbar-brand" href="#">Balaji's Book Store</a>
-
-			<!-- Links -->
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="/book/add">New
-						Book</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="/book/bookList">Book List</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Hello [[${#httpServletRequest.remoteUser}]]!</a></li>
-				<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
-			</ul>
-		</nav>
+		<div th:replace="fragments/header :: header">
 	</div>
 	<div class="container-fluid">
 		<h2>Book List</h2>

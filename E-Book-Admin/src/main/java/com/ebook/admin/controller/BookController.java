@@ -37,6 +37,7 @@ public class BookController {
 
 	@PostMapping("/add")
 	public String addBookPost(@ModelAttribute("book") Book book) {
+		
 		bookService.save(book);
 		MultipartFile bookImage = book.getBookImage();
 		try {
